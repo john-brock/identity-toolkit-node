@@ -26,3 +26,10 @@ node_modules
 
 # Users Environment Variables
 .lock-wscript
+
+# local start script
+start.sh
+
+# local folders holding credentials / secrets
+credentials
+temp
