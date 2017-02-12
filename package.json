@@ -1,17 +1,18 @@
 {
-  "name": "identity-toolkit-nodejs-sample",
+  "name": "YaaConnections",
   "version": "0.0.1",
-  "author": "Google Inc.",
-  "description": "Google Identity Toolkit sample app for Node.js",
+  "author": "Google Inc. (gitkit)",
+  "description": "Aggie Network YaaConnection online portal",
   "contributors": [
     {
-      "name": "Jin Liu"
+      "name": "Jin Liu (gitkit)",
+      "name": "John Brock (modifications)"
     }
   ],
-  "main": "./example-app.js",
+  "main": "yaacweb.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/googlesamples/identity-toolkit-node.git"
+    "url": "https://github.com/john-brock/yaac-web.git"
   },
   "keywords": [
     "google",
@@ -28,5 +29,8 @@
     "express": "^4.0.0",
     "gitkitclient": "^0.0.4"
   },
-  "license": "Apache 2"
+  "license": "Apache 2",
+  "scripts": {
+    "start": "node yaacweb.js"
+  }
 }
