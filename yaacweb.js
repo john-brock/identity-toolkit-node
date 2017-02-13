@@ -36,7 +36,7 @@ var apiKey = process.env.API_KEY
 var formUrl = process.env.FORM_URL
 var mapUrl = process.env.MAP_URL
 var allowedUsers = process.env.ALLOWED_USERS.split(',').map(function(user) {
-  return user.trim();
+  return user.trim().toLowerCase();
 });
 
 var serverConfig = {
@@ -72,7 +72,7 @@ function renderIndexPage(req, res) {
 }
 
 function renderMapIfUserIsYaacMember(res, resp) {
-  if (resp.email && allowedUsers.indexOf(resp.email) != -1 && resp.verified) {
+  if (resp.email && allowedUsers.indexOf(resp.email.toLowerCase()) != -1 && resp.verified) {
     // YAAC Member is Logged In
     console.log('INFO: YAAC member logged in: ' + resp.email);
     printYaacMap(res);
